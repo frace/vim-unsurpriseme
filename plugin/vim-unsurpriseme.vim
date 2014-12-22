@@ -41,21 +41,23 @@ function! s:SignColumnAlways(buf_valid, buf_empty, everywhere)
     if a:everywhere || !a:buf_empty && a:buf_valid
         sign define dummy_sign
         execute 'sign place 9999 line=1 name=dummy_sign buffer=' . bufnr('')
-    endif    
+    endif
 
     return
 endfunction
 
-" Link the color of the highlight group LineNr to SignColumn 
-function! s:LinkColor(link)
-    if a:link
+" Link the color of the highlight group LineNr to SignColumn
+function! s:LinkColor(link_color)
+    if a:link_color
         highlight clear SignColumn
         highlight link SignColumn LineNr
     endif
+
+    return
 endfunction
 
 augroup SignColumnAlways
     autocmd!
-    autocmd ColorScheme * call s:LinkColor(g:unsurpriseme_link_color)
+    autocmd VimEnter * call s:LinkColor(g:unsurpriseme_link_color)
     autocmd BufWinEnter * call s:SignColumnAlways(s:BufValid(),s:BufEmpty(),g:unsurpriseme_everywhere)
 augroup END
