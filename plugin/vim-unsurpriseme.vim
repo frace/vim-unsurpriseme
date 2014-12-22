@@ -34,17 +34,12 @@ endfunction
 
 " Enable the SignColumn
 function! s:SignColumnAlways(buf_valid, buf_empty, everywhere)
-    if a:everywhere
+    if a:everywhere || !a:buf_empty && a:buf_valid
         sign define dummy_sign
         execute 'sign place 9999 line=1 name=dummy_sign buffer=' . bufnr('')
-        return
-    endif
-    
-    if !a:buf_empty && a:buf_valid
-        sign define dummy_sign
-        execute 'sign place 9999 line=1 name=dummy_sign buffer=' . bufnr('')
-        return
-    endif
+    endif    
+
+    return
 endfunction
 
 augroup SignColumnAlways
