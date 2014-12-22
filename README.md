@@ -21,18 +21,15 @@ Else I'm pretty sure you know how your personal plugin management works. ;)
 
 
 ## Configuration
-Currently there is only one configuration variable available.
-
 ```
-" Show the SignColumn inside *every* buffer - default 1
+" Show the SignColumn inside *every* buffer - default 1.
 " If disabled the SignColumn will be hidden inside empty and «nofile» buffers.
 let g:unsurpriseme_everywhere = 1
+
+" Links the highlight group from SignColumn to LineNr - default 1.
+" If disabled the SignColumn highlight group uses the colorscheme defaults.
+let g:unsurpriseme_link_color = 1
 ```
-
-
-## Hints
-As for my personal taste it makes sense to assign the color of the `LineNr` highlight group
-to the `SignColumn` highlight group.
 
 
 ## Bugs

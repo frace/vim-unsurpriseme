@@ -1,7 +1,7 @@
 " File: vim-unsurpriseme.vim
 " Author: frace
 " Url: https://github.com/frace/vim-unsurpriseme
-" Description: Always show the SignsColumn
+" Description: Always show the SignColumn
 
 if exists('g:loaded_unsurpriseme')
     finish
@@ -19,6 +19,10 @@ endif
 " Check user settings
 if !exists('g:unsurpriseme_everywhere')
     let g:unsurpriseme_everywhere = 1
+endif
+
+if !exists('g:unsurpriseme_link_color')
+    let g:unsurpriseme_link_color = 1
 endif
 
 " Check if a buffer is empty.
@@ -42,7 +46,16 @@ function! s:SignColumnAlways(buf_valid, buf_empty, everywhere)
     return
 endfunction
 
+" Link the color of the highlight group LineNr to SignColumn 
+function! s:LinkColor(link)
+    if a:link
+        highlight clear SignColumn
+        highlight link SignColumn LineNr
+    endif
+endfunction
+
 augroup SignColumnAlways
     autocmd!
+    autocmd ColorScheme * call s:LinkColor(g:unsurpriseme_link_color)
     autocmd BufWinEnter * call s:SignColumnAlways(s:BufValid(),s:BufEmpty(),g:unsurpriseme_everywhere)
 augroup END
