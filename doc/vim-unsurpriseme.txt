@@ -1,4 +1,4 @@
-*vim-unsurpriseme.txt*  A Vim plugin which enables the SignColumn permanentely.
+*vim-unsurpriseme.txt*  A Vim plugin which enables the SignColumn permanently.
 *vim-unsurpriseme*
 
 Author:  frace <https://github.com/frace/vim-unsurpriseme>
@@ -24,7 +24,7 @@ editor area in specific situations. Per default the SignColumn is only visible
 if there are signs to show. As a consequence the SignColumn shifts the editor
 area to the right by the width of the SignColumn, which happens rather abrupt
 than in a smooth manner. Therefore I wanted the SignColumn to be visible
-permanentely, hence to behave a little bit more «unsurprisingly».
+permanently, hence to behave a little bit more «unsurprisingly».
 
 ==============================================================================
 2. CONFIGURATION                              *vim-unsurpriseme-configuration*

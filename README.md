@@ -5,7 +5,7 @@ do rely on a Vim feature called `signs` (also known as «gutter»). These have o
 symbols to the left of the editor area in specific situations.
 Per default the SignColumn is only visible if there are signs to show. As a consequence the SignColumn shifts the
 editor area to the right by the width of the SignColumn, which happens rather abrupt than in a smooth manner.
-Therefore I wanted the SignColumn to be visible permanentely, hence to behave a little bit more «unsurprisingly».
+Therefore I wanted the SignColumn to be visible permanently, hence to behave a little bit more «unsurprisingly».
 
 [what-vim-unsurpriseme]:https://github.com/frace/vim-unsurpriseme
 [what-vim-gitgutter]:https://github.com/airblade/vim-gitgutter
