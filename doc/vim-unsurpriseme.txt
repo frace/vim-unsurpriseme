@@ -50,7 +50,7 @@ If disabled the SignColumn highlight group uses the colorscheme defaults.
 <
 
 ==============================================================================
-4. CREDITS                                                   *numbers-credits*
+4. CREDITS                                          *vim-unsurpriseme-credits*
 
 I found the original snippet/«one-liner» somewhere in the wild.
 Unfortunately I can't remember the source anymore. If the original author
