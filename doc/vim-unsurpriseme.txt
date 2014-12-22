@@ -1,0 +1,59 @@
+*vim-unsurpriseme.txt*  A Vim plugin which enables the SignColumn permanentely.
+*vim-unsurpriseme*
+
+Author:  frace <https://github.com/frace/vim-unsurpriseme>
+
+This plugin requires Vim 7.3 or later.
+
+Help on using vim-unsurpriseme                              *vim-unsurpriseme*
+
+==============================================================================
+TOC                                                         *vim-unsurpriseme*
+
+1. Introduction .......................... |vim-unsurpriseme-intro|
+2. Configuration ......................... |vim-unsurpriseme-configuration|
+3. Credits ............................... |vim-unsurpriseme-credits|
+
+==============================================================================
+1. INTRODUCTION                                       *vim-unsurpriseme-intro*
+
+Plugins like vim-gitgutter, vim-signify or syntastic do rely on a Vim feature
+called signs (also known as «gutter»).
+These have one property in common: They blend in symbols to the left of the
+editor area in specific situations. Per default the SignColumn is only visible
+if there are signs to show. As a consequence the SignColumn shifts the editor
+area to the right by the width of the SignColumn, which happens rather abrupt
+than in a smooth manner. Therefore I wanted the SignColumn to be visible
+permanentely, hence to behave a little bit more «unsurprisingly».
+
+==============================================================================
+2. CONFIGURATION                              *vim-unsurpriseme-configuration*
+
+                                                   *g:unsurpriseme_everywhere*
+g:unsurpriseme_everywhere~
+
+Default: 1
+
+If disabled the SignColumn will be hidden inside empty and «nofile» buffers.
+>
+    let g:unsurpriseme_everywhere = 0
+<
+
+                                                   *g:unsurpriseme_link_color*
+g:unsurpriseme_link_color~
+
+Default: 1
+
+If disabled the SignColumn highlight group uses the colorscheme defaults.
+>
+    let g:unsurpriseme_link_color = 0
+<
+
+==============================================================================
+4. CREDITS                                                   *numbers-credits*
+
+I found the original snippet/«one-liner» somewhere in the wild.
+Unfortunately I can't remember the source anymore. If the original author
+finds this plugin I will gladly list his name right here.
+
+vim:tw=78:ts=8:ft=help:norl:
