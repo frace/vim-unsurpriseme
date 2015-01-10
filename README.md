@@ -1,4 +1,4 @@
-# What is it?
+# What is vim-unsurpriseme?
 [vim-unsurpriseme][what-vim-unsurpriseme] is a plugin for the Vim editor.
 Plugins like [vim-gitgutter][what-vim-gitgutter], [vim-signify][what-vim-signify] or [syntastic][what-syntastic]
 do rely on a Vim feature called `signs` (also known as «gutter»). These have one property in common: They blend in
